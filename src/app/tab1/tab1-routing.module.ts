@@ -6,6 +6,14 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
+  },
+  {
+    path: 'other',
+    loadChildren: () => import('./other/other.module').then( m => m.OtherPageModule)
+  },
+  {
+    path: 'other2',
+    loadChildren: () => import('./other2/other2.module').then( m => m.Other2PageModule)
   }
 ];
 
